@@ -1,0 +1,13 @@
+<h1>Formulario Reactivo</h1>
+
+<form #formReac="ngForm" [formGroup]="form" (ngSubmit)="add()">
+
+    <p>ID <input type="number" formControlName="id" required readonly></p>
+    <p>DNI <input type="text" formControlName="dni" required></p>
+    <p>Nombre <input type="text" formControlName="nombre" required></p>
+    <p>Horas Formación <input type="number" formControlName="horas_formacion" required></p>
+
+    <button type="submit" [disabled]="formReac.invalid">Enviar</button>
+    
+
+</form>
